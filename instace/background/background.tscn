@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://asserts/background.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 246.662, 6.17764 )
+
+[sub_resource type="LineShape2D" id=2]
+normal = Vector2( -0.00219117, -0.999998 )
+d = 97.9919
+
+[sub_resource type="LineShape2D" id=3]
+
+[node name="background" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 248.5, 169 )
+
+[node name="topwall" type="StaticBody2D" parent="." groups=[
+"top-wall",
+]]
+position = Vector2( 248.5, 7.7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="topwall"]
+shape = SubResource( 1 )
+
+[node name="bottomwall" type="StaticBody2D" parent="." groups=[
+"bottom-wall",
+]]
+position = Vector2( 248.5, 330 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bottomwall"]
+shape = SubResource( 1 )
+
+[node name="leftwall" type="StaticBody2D" parent="." groups=[
+"left-wall",
+]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftwall"]
+position = Vector2( -98.778, 170 )
+rotation = 1.5708
+scale = Vector2( 1.6, 1 )
+shape = SubResource( 2 )
+
+[node name="rightwall" type="StaticBody2D" parent="." groups=[
+"right-wall",
+]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightwall"]
+position = Vector2( 497, 169 )
+rotation = 4.71239
+scale = Vector2( 1.6, 1 )
+shape = SubResource( 3 )
