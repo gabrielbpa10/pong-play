@@ -7,7 +7,7 @@ simulate a pong's match that there are two players, controlling the rackets.
 
 - Esp 8266  
 The device control the direction of rackets to up or to down at the match when the user to push the buttons or move the potentiometer to left or to right.
-The code on the device is here: 
+The code on the device is here: https://github.com/gabrielbpa10/joystick-pong
 
 - Godot
 The Godot engine is used to create the pong program. Through communication serial, the commands are passed to the game, manipulating the rackets.
